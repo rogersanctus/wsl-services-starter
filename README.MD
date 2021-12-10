@@ -48,7 +48,7 @@ Você ainda precisa substituir no arquivo start_services.conf o texto USER_NAME 
 Você pode fazer isso utilizando o comando:
 
 ```sh
-sed -in "s|USER_NAME|$USER|g" /etc/sudoers.d/start_services.conf
+sed -i "s|USER_NAME|$USER|g" /etc/sudoers.d/start_services.conf
 ```
 
 Prontinho. Agora toda vez que o seu Linux WSL for iniciado ele irá executar o script start_services.sh, rodando todos os services configurados nele apenas uma vez. Ignorando o start no caso de o serviço já estar em execução/ativo.
